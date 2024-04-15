@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["es2017", "dom", "webworker"],
+    "noImplicitUseStrict": true,
+    "outDir": "local_compiled_js_for_test",
+    "rootDir": ".",
+    "skipLibCheck": true,
+    "target": "es5",
+    "sourceMap": true,
+    "typeRoots": ["./node_modules/@types"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "app.constants": ["core/templates/app.constants"],
+      "components/*": ["core/templates/components/*"],
+      "domain/*": ["core/templates/domain/*"],
+      "expressions/*": ["core/templates/expressions/*"],
+      "pages/*": ["core/templates/pages/*"],
+      "services/*": ["core/templates/services/*"],
+      "classifiers/*": ["extensions/classifiers/*"],
+      "interactions/*": ["extensions/interactions/*"],
+      "filters/*": ["core/templates/filters/*"],
+      "tests/*": ["core/templates/tests/*"]
+    }
+  },
+  "files": [
+    "assets/constants.ts",
+    "assets/rich_text_components_definitions.ts",
+    "core/tests/karma.conf.ts"
+  ],
+  "include": ["core", "extensions", "typings"],
+  "exclude": [
+    "core/tests",
+    "core/templates/google-analytics.initializer.ts"
+  ]
+}
